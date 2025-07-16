@@ -1,5 +1,9 @@
 # metrics-exporter-otel
 
+**WARNING**
+
+This crate is not affiliated to [metrics] crate (yet). Use it at your own risk. See [PR](https://github.com/metrics-rs/metrics/pull/595)
+
 [![docs-badge][docs-badge]][docs] [![crates-badge][crates-badge]][crates] [![license-badge][license-badge]][license]
 
 [docs-badge]: https://docs.rs/metrics-exporter-otel/badge.svg
