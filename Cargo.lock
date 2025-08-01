@@ -1158,7 +1158,7 @@ dependencies = [
 
 [[package]]
 name = "metrics-exporter-otel"
-version = "0.1.0-fork.2"
+version = "0.1.0-fork.3"
 dependencies = [
  "metrics",
  "metrics-util",
