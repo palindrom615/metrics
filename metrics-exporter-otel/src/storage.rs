@@ -1,5 +1,6 @@
 use crate::instruments::{OtelCounter, OtelGauge, OtelHistogram};
 use crate::metadata::{MetricDescription, MetricMetadata};
+use crate::metrics_ext::UnitExt;
 use metrics::{Key, KeyName};
 use metrics_util::registry::Storage;
 use metrics_util::MetricKind;

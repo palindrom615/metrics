@@ -5,6 +5,8 @@
 mod instruments;
 mod metadata;
 mod storage;
+/// FIXME this module is for temporary patch of [metrics]
+mod metrics_ext;
 
 use std::sync::Arc;
 use crate::metadata::MetricMetadata;
