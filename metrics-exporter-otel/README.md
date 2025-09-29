@@ -1,8 +1,5 @@
 # metrics-exporter-otel
 
-**WARNING**
-
-This crate is not affiliated to [metrics] crate (yet). Use it at your own risk. See [PR](https://github.com/metrics-rs/metrics/pull/595)
 
 [![docs-badge][docs-badge]][docs] [![crates-badge][crates-badge]][crates] [![license-badge][license-badge]][license]
 
@@ -17,10 +14,6 @@ A [`metrics`]-compatible exporter for sending metrics to OpenTelemetry collector
 
 [`metrics`]: https://docs.rs/metrics/
 
-## Overview
-
-A [`metrics`]-compatible exporter for OpenTelemetry collectors and OTLP endpoints.
-
 ## Features
 
 - Counters, gauges, and histograms
@@ -29,7 +22,7 @@ A [`metrics`]-compatible exporter for OpenTelemetry collectors and OTLP endpoint
 - Lock-free concurrent data structures
 - Works with any OpenTelemetry [`Meter`]
 
-[`Meter`]: https://docs.rs/opentelemetry/latest/opentelemetry/metrics/trait.Meter.html
+[`Meter`]: https://docs.rs/opentelemetry/latest/opentelemetry/metrics/struct.Meter.html
 
 ## Quick Start
 
@@ -38,7 +31,7 @@ Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 metrics = "0.24"
-metrics-exporter-otel = "0.1"
+metrics-exporter-otel = "0.2"
 opentelemetry = "0.30"
 opentelemetry_sdk = "0.30"
 ```
