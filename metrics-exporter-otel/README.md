@@ -31,9 +31,9 @@ Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 metrics = "0.24"
-metrics-exporter-otel = "0.2"
-opentelemetry = "0.30"
-opentelemetry_sdk = "0.30"
+metrics-exporter-otel = "0.3"
+opentelemetry = "0.31"
+opentelemetry_sdk = "0.31"
 ```
 
 Basic usage:
@@ -60,6 +60,11 @@ metrics::histogram!("response_time", "endpoint" => "/api/users").record(0.123);
 ## Custom Histogram Boundaries
 
 ```rust
+# use metrics_exporter_otel::OpenTelemetryRecorder;
+# use opentelemetry::metrics::MeterProvider;
+# use opentelemetry_sdk::metrics::SdkMeterProvider;
+# let provider = SdkMeterProvider::default();
+# let meter = provider.meter("my_application");
 let recorder = OpenTelemetryRecorder::new(meter);
 
 recorder.set_histogram_bounds(

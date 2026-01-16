@@ -8,13 +8,13 @@ mod storage;
 /// FIXME this module is for temporary patch of [metrics]
 mod metrics_ext;
 
-use std::sync::Arc;
 use crate::metadata::MetricMetadata;
 use crate::storage::OtelMetricStorage;
 use metrics::{Counter, Gauge, Histogram, Key, KeyName, Recorder, SharedString, Unit};
 use metrics_util::registry::Registry;
 use metrics_util::MetricKind;
 use opentelemetry::metrics::Meter;
+use std::sync::Arc;
 
 /// A [`Recorder`] that exports metrics to OpenTelemetry.
 ///
@@ -65,12 +65,7 @@ impl OpenTelemetryRecorder {
 }
 
 impl Recorder for OpenTelemetryRecorder {
-    fn describe_counter(
-        &self,
-        key_name: KeyName,
-        unit: Option<Unit>,
-        description: SharedString,
-    ) {
+    fn describe_counter(&self, key_name: KeyName, unit: Option<Unit>, description: SharedString) {
         self.metadata.set_description(key_name, MetricKind::Counter, unit, description);
     }
 
@@ -78,12 +73,7 @@ impl Recorder for OpenTelemetryRecorder {
         self.metadata.set_description(key_name, MetricKind::Gauge, unit, description);
     }
 
-    fn describe_histogram(
-        &self,
-        key_name: KeyName,
-        unit: Option<Unit>,
-        description: SharedString,
-    ) {
+    fn describe_histogram(&self, key_name: KeyName, unit: Option<Unit>, description: SharedString) {
         self.metadata.set_description(key_name, MetricKind::Histogram, unit, description);
     }
 
