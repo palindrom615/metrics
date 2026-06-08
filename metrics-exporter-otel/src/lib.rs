@@ -4,9 +4,9 @@
 
 mod instruments;
 mod metadata;
-mod storage;
 /// FIXME this module is for temporary patch of [metrics]
 mod metrics_ext;
+mod storage;
 
 use crate::metadata::MetricMetadata;
 use crate::storage::OtelMetricStorage;
