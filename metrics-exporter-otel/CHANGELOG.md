@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.3.2]
+
+- Update `opentelemetry` and `opentelemetry_sdk` to `0.32`.
+- Remove local `path` overrides for `metrics` and `metrics-util` dependencies.
+
 ## [v0.3.1]
 
 - Optimize string allocations in storage

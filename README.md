@@ -31,9 +31,9 @@ Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 metrics = "0.24"
-metrics-exporter-otel = "0.2"
-opentelemetry = "0.30"
-opentelemetry_sdk = "0.30"
+metrics-exporter-otel = "0.3"
+opentelemetry = "0.32"
+opentelemetry_sdk = "0.32"
 ```
 
 Basic usage:
