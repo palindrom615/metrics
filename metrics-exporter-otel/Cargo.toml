@@ -1,6 +1,6 @@
 [package]
 name = "metrics-exporter-otel"
-version = "0.3.1"
+version = "0.3.2"
 edition = "2021"
 rust-version = "1.75.0"
 
@@ -16,8 +16,8 @@ categories = ["development-tools::debugging"]
 keywords = ["metrics", "telemetry", "opentelemetry", "otel", "observability"]
 
 [dependencies]
-metrics = { version = "^0.24", path = "../metrics" }
-metrics-util = { version = "^0.20", path = "../metrics-util", default-features = false, features = ["registry"] }
+metrics = "^0.24"
+metrics-util = { version = "^0.20", default-features = false, features = ["registry"] }
 opentelemetry = { workspace = true, features = ["metrics"] }
 portable-atomic = { workspace = true, features = ["float", "critical-section"] }
 scc = { workspace = true }
